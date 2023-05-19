@@ -1,0 +1,47 @@
+@import '../../../assets/styles/variable';
+@import '../../../assets//styles/common/function.scss';
+.home-screen-wrapper {
+	background-color: $white;
+	color: black;
+	height: 100vh;
+	width: 100vw;
+	.hero--wrapper {
+		margin: 20px auto;
+		height: calc(100vh - 370px);
+		max-width: 1400px;
+
+		.title {
+			width: 100%;
+			max-width: 1400px;
+			margin: 0 auto;
+			color: #415c2b;
+		}
+		.title-hr {
+			color: #415c2b;
+			background-color: #415c2b;
+			height: 1px;
+		}
+		.cards-wrapper {
+			margin-top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			.card-conatiner--wrapper {
+				width: 20%;
+				height: 150px;
+				background-color: rgb(230, 235, 230);
+				border-radius: 5px;
+				padding: 20px;
+				margin: 15px 10px;
+				.location-title {
+					font-size: 20px;
+				}
+				.description {
+					width: 300px;
+				}
+				.labels {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

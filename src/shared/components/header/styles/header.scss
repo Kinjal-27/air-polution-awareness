@@ -1,0 +1,64 @@
+@import '../../../../assets/styles/variable.scss';
+@import '../../../../assets/styles/common/function.scss';
+
+.main-header {
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: calc(100% - 40px);
+
+	.contact-detail--wrapper {
+		.contact-inner-wrapper {
+			display: flex;
+			.phone-svg {
+				height: 18px;
+				width: 18px;
+				path {
+					fill: getColor($grey, 150);
+				}
+			}
+			.agency-svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
+.header {
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url('../../../../assets/images/headerBackground.jpg');
+	height: 220px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+
+	.link-search--wrapper {
+		padding: 20px;
+		justify-content: space-between;
+		.name-search {
+			padding: 10px;
+			background: white;
+			color: black;
+			border-radius: 8px;
+			height: 40px;
+			width: 400px;
+			border: 1px solid white;
+			&::placeholder {
+				color: getColor($grey, 100);
+			}
+		}
+		.search-icon {
+			right: 20px;
+			top: 9px;
+		}
+		.links-wrapper {
+			.links {
+				color: white;
+				padding: 20px;
+			}
+		}
+	}
+}
