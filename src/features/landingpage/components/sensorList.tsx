@@ -1,31 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import jsonPollutionData from 'assets/json/pollutionData.json';
+import jsonPollutionData from 'assets/JSONDATA/pollutionData.json';
+
 const SensorList = () => {
 	const [jsonData, setJsonData] = useState(jsonPollutionData);
 
 	return (
 		<div>
 			<div className='hero--wrapper'>
-				<div className='title'>
-					<p className='font-size--30'>Air Polution Spreaded by Ahmedabad Cities </p>
-					<hr className='title-hr' />
-				</div>
 				<div className='cards-wrapper'>
-					{jsonData.data.sensors.map((items) => {
-						const {
-							id,
-							location,
-							longitude,
-							latitude,
-							sensor_name,
-							sensor_type,
-							severity,
-							co,
-							pm25,
-							description
-						} = items;
+					{jsonData.data.sensors.map((items, index) => {
+						const { id, location, sensor_name, sensor_type, severity, co, pm25, temperature } = items;
+
 						return (
-							<div key={id} className='card-conatiner--wrapper'>
+							<div key={index} className='card-conatiner--wrapper'>
 								<p className='location-title mb--10'>{location}</p>
 								<p>
 									<span className='labels'>Severity : </span>
@@ -46,6 +33,10 @@ const SensorList = () => {
 								<p>
 									<span className='labels'>pm25 : </span>
 									{pm25}
+								</p>
+								<p>
+									<span className='labels'>Temperature : </span>
+									{temperature}
 								</p>
 							</div>
 						);

@@ -1,14 +1,10 @@
 import React, { FC, useState } from 'react';
-import Logo from 'assets/images/logo.png';
+import Logo from 'assets/images/amcLogo.png';
 import { AgencyIcon, Phone, Search } from 'shared/icons/icons';
 import { NavLink } from 'react-router-dom';
 
 import '../header/styles/header.scss';
 import { debounce } from 'lodash';
-
-// interface IHeaderProps {
-// handleNameSearch: (value: any) => void;
-// }
 
 const Header: FC = () => {
 	const [searchQuestion, setSearchQuestion] = useState('');
@@ -21,7 +17,7 @@ const Header: FC = () => {
 		<div>
 			<div className='main-header'>
 				<div className='logo'>
-					<img src={Logo} alt='logo' />
+					<img src={Logo} alt='logo' height={40} width={200} />
 				</div>
 				<div className='contact-detail--wrapper'>
 					<div className='contact-inner-wrapper'>
